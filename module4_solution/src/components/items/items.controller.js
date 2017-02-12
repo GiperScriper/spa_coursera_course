@@ -5,11 +5,14 @@ angular
   .module('items')
   .controller('ItemsController', itemsController);
 
-itemsController.$inject = ['data'];
-function itemsController(data) {
+itemsController.$inject = ['data', 'categoriesItems'];
+function itemsController(data, categoriesItems) {
   var vm = this;
-  vm.category = data.data.category.name;
-  vm.menu_items = data.data.menu_items;
+  vm.category = categoriesItems.data.category.name;
+  vm.menu_items = categoriesItems.data.menu_items;
+
+  console.log('categoriesItems', categoriesItems);
+  console.log('data from parent state: ', data);
 }
 
 })();
