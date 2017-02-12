@@ -41,7 +41,7 @@ function ShoppingListCheckOffService() {
   var toBuyItems = buyList;
   var boughtItems = [];
 
-  function gettoBuyItems() {
+  function getToBuyItems() {
     return toBuyItems;
   };
 
@@ -54,7 +54,7 @@ function ShoppingListCheckOffService() {
     toBuyItems.splice(index, 1);
   };
 
-  service.toBuyItems = gettoBuyItems();
+  service.toBuyItems = getToBuyItems();
   service.boughtItems = getboughtItems();
 
   return service;
